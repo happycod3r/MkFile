@@ -275,8 +275,18 @@ void MkFile::gui::InitializeComponent(void) {
 			this->theme_menu_dark
 	});
 	this->view_menu_theme->Name = L"view_menu_theme";
-	this->view_menu_theme->Size = System::Drawing::Size(111, 22);
+	this->view_menu_theme->Size = System::Drawing::Size(110, 22);
 	this->view_menu_theme->Text = L"Theme";
+
+	this->theme_menu_light->Name = L"theme_menu_light";
+	this->theme_menu_light->Size = System::Drawing::Size(50, 20);
+	this->theme_menu_light->Text = L"Light Theme";
+	this->theme_menu_light->Click += gcnew System::EventHandler(this, &gui::on_theme_menu_light_click);
+
+	this->theme_menu_dark->Name = L"theme_menu_dark";
+	this->theme_menu_dark->Size = System::Drawing::Size(50, 20);
+	this->theme_menu_dark->Text = L"Dark Theme";
+	this->theme_menu_dark->Click += gcnew System::EventHandler(this, &gui::on_theme_menu_dark_click);
 
 	// 
 	// help_menu
@@ -491,11 +501,11 @@ void MkFile::gui::on_theme_menu_light_click(System::Object^ sender, System::Even
 
 void MkFile::gui::on_theme_menu_dark_click(System::Object^ sender, System::EventArgs^ e) {
 	this->BackColor = Color::Black;
-	this->ForeColor = SystemColors::ControlLight;
+	this->ForeColor = SystemColors::ControlDark;
 
-	this->file_name_input->BackColor = SystemColors::ControlDarkDark;
-	this->file_extension_input->BackColor = SystemColors::ControlDarkDark;
-	this->file_path_input->BackColor = SystemColors::ControlDarkDark;
+	this->file_name_input->BackColor = SystemColors::ControlDark;
+	this->file_extension_input->BackColor = SystemColors::ControlDark;
+	this->file_path_input->BackColor = SystemColors::ControlDark;
 	this->file_queue_list->BackColor = SystemColors::ControlDarkDark;
 
 	this->file_name_input->ForeColor = Color::Cyan;

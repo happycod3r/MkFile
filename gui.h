@@ -63,6 +63,7 @@ namespace MkFile {
 		System::Windows::Forms::ToolStripMenuItem^ file_menu_restart;
 		System::Windows::Forms::ToolStripMenuItem^ file_menu_exit;
 		System::Windows::Forms::ToolStripMenuItem^ theme_menu_light;
+		System::Windows::Forms::ToolStripMenuItem^ theme_menu_dark;
 		System::Windows::Forms::ColumnHeader^ file_column_header;
 		System::Windows::Forms::Label^ output_lbl;
 
@@ -72,8 +73,6 @@ namespace MkFile {
 		System::Windows::Forms::ToolTip^ create_btn_tooltip;
 		System::Windows::Forms::ToolTip^ done_btn_tooltip;
 		System::Windows::Forms::Button^ clear_queue_btn;
-		//ComponentFactory::Krypton::Toolkit::KryptonManager^ kryptonManager1;
-		System::Windows::Forms::ToolStripMenuItem^ theme_menu_dark;
 
 		// Helper Methods
 
