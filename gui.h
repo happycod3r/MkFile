@@ -34,7 +34,7 @@ namespace MkFile {
 		System::Windows::Forms::Button^ done_btn;
 		System::Windows::Forms::Label^ file_path_lbl;
 		System::Windows::Forms::RichTextBox^ file_path_input;
-		System::Windows::Forms::Button^ open_folder_btn;
+		System::Windows::Forms::Button^ choose_path_btn;
 		System::Windows::Forms::FolderBrowserDialog^ folderBrowserDialog1;
 		System::ComponentModel::IContainer^ components;
 
@@ -71,13 +71,17 @@ namespace MkFile {
 		System::Windows::Forms::ToolTip^ add_file_btn_tooltip;
 		System::Windows::Forms::ToolTip^ create_btn_tooltip;
 		System::Windows::Forms::ToolTip^ done_btn_tooltip;
-		System::Windows::Forms::Button^ button1;
+		System::Windows::Forms::Button^ clear_queue_btn;
 		//ComponentFactory::Krypton::Toolkit::KryptonManager^ kryptonManager1;
 		System::Windows::Forms::ToolStripMenuItem^ theme_menu_dark;
 
+		// Helper Methods
+
+		void out(System::String^ text);
+
 		void InitializeComponent(void);
 
-		void open_folder_btn_Click(System::Object^ sender, System::EventArgs^ e);
+		void choose_path_btn_Click(System::Object^ sender, System::EventArgs^ e);
 
 		void done_btn_click(System::Object^ sender, System::EventArgs^ e);
 
@@ -90,7 +94,6 @@ namespace MkFile {
 		void on_add_file_btn_click(System::Object^ sender, System::EventArgs^ e);
 
 		void create_files_btn_click(System::Object^ sender, System::EventArgs^ e);
-
 
 		void on_gui_shown(System::Object^ sender, System::EventArgs^ e);
 
